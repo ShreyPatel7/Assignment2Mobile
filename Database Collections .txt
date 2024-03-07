@@ -1,0 +1,52 @@
+Database Collections: 
+I need to impliment the features in the app:
+
+1. Users:
+    - userId (String): Unique identifier for each user
+    - username (String): User's username
+    - email (String): User's email address
+    - password (String): User's hashed password
+    - profilePic (String): URL of the user's profile picture
+    - createdAt (Timestamp): Timestamp of when the user account was created
+    - lastLoggedIn (Timestamp): Timestamp of when the user last logged in
+
+2. Quizzes:
+    - quizId (String): Unique identifier for each quiz
+    - title (String): Title of the quiz
+    - category (String): Category of the quiz (e.g., Science, History, Sports)
+    - description (String): Description of the quiz
+    - creatorId (String): Identifier of the user who created the quiz
+    - createdAt (Timestamp): Timestamp of when the quiz was created
+
+3. Questions:
+    - questionId (String): Unique identifier for each question
+    - quizId (String): Identifier of the quiz the question belongs to
+    - questionText (String): Text of the question
+    - options (Array of Strings): Array containing the options for the question
+    - correctOptionIndex (Integer): Index of the correct option in the options array
+    - explanation (String): Explanation of the correct answer
+    - difficultyLevel (String): Difficulty level of the question (e.g., Easy, Medium, Hard)
+
+4. Results:
+    - resultId (String): Unique identifier for each result
+    - quizId (String): Identifier of the quiz the result belongs to
+    - userId (String): Identifier of the user who attempted the quiz
+    - score (Integer): Score obtained by the user in the quiz
+    - totalQuestions (Integer): Total number of questions in the quiz
+    - correctAnswers (Integer): Number of questions answered correctly by the user
+    - incorrectAnswers (Integer): Number of questions answered incorrectly by the user
+    - unattemptedQuestions (Integer): Number of questions not attempted by the user
+    - timestamp (Timestamp): Timestamp of when the quiz was completed by the user
+
+5. Scores:
+    - userId (String): Identifier of the user
+    - totalScore (Integer): Total cumulative score of the user across all quizzes attempted
+    - bestScore (Integer): Best score achieved by the user in any single quiz
+    - totalQuizzes (Integer): Total number of quizzes attempted by the user
+    - createdAt (Timestamp): Timestamp of when the score record was created or updated
+
+6. Settings:
+    - userId (String): Identifier of the user
+    - notificationEnabled (Boolean): Indicates whether notifications are enabled for the user
+    - darkModeEnabled (Boolean): Indicates whether dark mode is enabled for the user
+    - createdAt (Timestamp): Timestamp of when the settings record was created or updated
